@@ -1,5 +1,6 @@
-# Getting Started with Create React App
+# helpmebuy
 
+When you need to share your shopping list so that you don't need to get everything yourself!
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
