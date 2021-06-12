@@ -3,7 +3,7 @@ import token from "styles/token";
 
 const { padding } = token;
 
-export const Wrapper = styled.div`
+export const FormWrapper = styled.form`
 	padding: ${padding};
 	width: 75%;
 	display: flex;

@@ -1,5 +1,5 @@
-import { useState, ChangeEvent } from "react";
-import { Wrapper } from "./styles";
+import { useState, ChangeEvent, FormEvent } from "react";
+import { FormWrapper } from "./styles";
 
 interface InputProps {
 	addItems: (item: string) => void
@@ -12,16 +12,17 @@ const Input = (props: InputProps): JSX.Element => {
 		setValue(e.target.value);
 	}
 
-	const onClick = (): void => {
+	const onSubmit = (event: FormEvent): void => {
+		event.preventDefault();
 		props.addItems(value);
 		setValue("");
 	}
 
 	return (
-		<Wrapper>
+		<FormWrapper onSubmit={onSubmit}>
 			<input value={value} onChange={onChange} placeholder="Add an item here" />
-			<button onClick={onClick}>Add</button>
-		</Wrapper>
+			<button type="submit">Add</button>
+		</FormWrapper>
 	);
 }
 
