@@ -14,8 +14,11 @@ const Input = ({ addItem }: InputProps): JSX.Element => {
 
 	const onSubmit = (event: FormEvent): void => {
 		event.preventDefault();
-		addItem(value);
-		setValue("");
+
+		if (value) {
+			addItem(value);
+			setValue("");
+		}
 	}
 
 	return (
