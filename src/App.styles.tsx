@@ -13,5 +13,5 @@ export const Header = styled.header`
 
 export const Items = styled.div`
 	border: 1px solid white;
-	width: 50%;
+  width: 75%;
 `;
