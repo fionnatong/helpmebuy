@@ -10,8 +10,3 @@ export const Wrapper = styled.div`
 export const Header = styled.header`
   text-align: center;
 `;
-
-export const Items = styled.div`
-	border: 1px solid white;
-  width: 75%;
-`;

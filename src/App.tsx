@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "components/Input";
-import Item from "components/Item";
-import { Wrapper, Header, Items } from "./App.styles";
+import Items from "components/Items";
+import { Wrapper, Header } from "./App.styles";
 
 const App = (): JSX.Element => {
   const [items, setItems] = useState<string[]>([]);
@@ -17,10 +17,8 @@ const App = (): JSX.Element => {
         <h1>helpmebuy! ✏️</h1>
       </Header>
       <Input addItems={addItems} />
-      <Items>
-        {items.map((item, i) => <Item name={item} key={i} />)}
-      </Items>
-    </Wrapper>
+      <Items items={items} />
+      </Wrapper>
   );
 }
 

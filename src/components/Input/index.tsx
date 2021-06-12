@@ -5,7 +5,7 @@ interface InputProps {
 	addItems: (item: string) => void
 }
 
-const Input = (props: InputProps): JSX.Element => {
+const Input = ({ addItems }: InputProps): JSX.Element => {
 	const [value, setValue] = useState<string>("");
 
 	const onChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -14,7 +14,7 @@ const Input = (props: InputProps): JSX.Element => {
 
 	const onSubmit = (event: FormEvent): void => {
 		event.preventDefault();
-		props.addItems(value);
+		addItems(value);
 		setValue("");
 	}
 
