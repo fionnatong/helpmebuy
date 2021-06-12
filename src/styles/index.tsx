@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import token from "styles/token";
 
-const { font, color } = token;
+const { font, color, spacing } = token;
 
 const GlobalStyles = createGlobalStyle`
 	body {
@@ -28,6 +28,20 @@ const GlobalStyles = createGlobalStyle`
 	input,
 	button {
 		font-size: ${font.size.m};
+		padding: ${spacing.m};
+		border: 0;
+	}
+
+	input {
+		::placeholder {
+			opacity: 1;
+		}
+	}
+
+	button {
+		:hover {
+			cursor: pointer;
+		}
 	}
 
 	p {

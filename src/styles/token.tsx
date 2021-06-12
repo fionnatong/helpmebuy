@@ -10,7 +10,11 @@ const token = {
 		white: "white",
 		darkblue: "#282c34"
 	},
-	padding: "16px 24px",
+	spacing: {
+		s: "12px",
+		m: "16px",
+		l: "24px"
+	},
 	breakpoint: {
 		s: "@media (min-width: 640px)",
     m: "@media (min-width: 768px)",

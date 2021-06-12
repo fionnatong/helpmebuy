@@ -6,9 +6,14 @@ import { Wrapper, Header } from "./App.styles";
 const App = (): JSX.Element => {
   const [items, setItems] = useState<string[]>([]);
 
-  const addItems = (item: string): void => {
-    const newItems = [...items, item];
-    setItems(newItems);
+  const addItem = (item: string): void => {
+    const updatedItems = [...items, item];
+    setItems(updatedItems);
+  }
+
+  const removeItem = (id: number): void => {
+    const updatedItems = items.filter((item, i) => i !== id);
+    setItems(updatedItems);
   }
 
   return (
@@ -16,8 +21,8 @@ const App = (): JSX.Element => {
       <Header>
         <h1>helpmebuy! ✏️</h1>
       </Header>
-      <Input addItems={addItems} />
-      <Items items={items} />
+      <Input addItem={addItem} />
+      <Items items={items} removeItem={removeItem} />
       </Wrapper>
   );
 }

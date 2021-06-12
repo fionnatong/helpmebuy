@@ -2,10 +2,10 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { FormWrapper } from "./styles";
 
 interface InputProps {
-	addItems: (item: string) => void
+	addItem: (item: string) => void
 }
 
-const Input = ({ addItems }: InputProps): JSX.Element => {
+const Input = ({ addItem }: InputProps): JSX.Element => {
 	const [value, setValue] = useState<string>("");
 
 	const onChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -14,7 +14,7 @@ const Input = ({ addItems }: InputProps): JSX.Element => {
 
 	const onSubmit = (event: FormEvent): void => {
 		event.preventDefault();
-		addItems(value);
+		addItem(value);
 		setValue("");
 	}
 
